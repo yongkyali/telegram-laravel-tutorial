@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Http\Request;
-use Telegram;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +29,5 @@ Route::post('bot/sendmessage', function() {
     ]);
     return;
 });
+
+Route::post('/webhook', 'TelegramController@webhook');
